@@ -1,14 +1,14 @@
 #!/bin/bash
 set -euo pipefail
 
-cat << EOM >> /etc/pacman.conf
+cat  >> /etc/pacman.conf <<- AYA
 [multilib]
 Include = /etc/pacman.d/mirrorlist
 
 [archlinuxcn]
 SigLevel = Never
 Server = https://mirrors.bfsu.edu.cn/archlinuxcn/$arch
-EOM
+AYA
 
 pacman -Syu --noconfirm --needed python p7zip bash-completion npm yarn asar
 git clone "https://aur.archlinux.org/$1.git"
