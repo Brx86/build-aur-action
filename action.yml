@@ -1,15 +1,12 @@
-name: 'Build AUR Package'
-description: 'Test build an AUR package in Docker container'
+name: 'Get AUR Packages'
+description: 'Clone ALl AUR Packages'
 branding:
   icon: user-check
   color: gray-dark
 inputs:
   repo-name:
-    description: 'AUR repository name to build'
-    required: true
-    default: 'qv2ray-dev-git'
+    description: 'Clone ALl AUR Packages'
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ inputs.repo-name }}
+
