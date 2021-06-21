@@ -1,13 +1,13 @@
-name: 'Build AUR Package'
-description: 'Test build an AUR package in Docker container'
+name: 'Build AUR Package with Yay'
+description: 'Build AUR Package with Yay'
 branding:
   icon: user-check
   color: gray-dark
 inputs:
   repo-name:
-    description: 'AUR repository name to build'
+    description: 'Build AUR Package with Yay'
     required: true
-    default: 'qv2ray-dev-git'
+    default: 'yay'
 runs:
   using: 'docker'
   image: 'Dockerfile'
