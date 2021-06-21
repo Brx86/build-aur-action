@@ -5,7 +5,7 @@ cat << AYA >> /etc/pacman.conf
 Include = /etc/pacman.d/mirrorlist
 [archlinuxcn]
 SigLevel = Never
-Server = https://mirrors.bfsu.edu.cn/archlinuxcn/x86_64
+Server = Server = https://repo.archlinuxcn.org/x86_64
 AYA
 pacman -Syu --noconfirm --needed yay
 useradd builder -m
