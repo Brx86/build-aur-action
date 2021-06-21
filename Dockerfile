@@ -1,4 +1,3 @@
 FROM archlinux:latest
-RUN pacman -Syu base-devel git --needed --noconfirm --overwrite '*' && sed -i '/E_ROOT/d' /usr/bin/makepkg
-COPY entrypoint.sh /entrypoint.sh
-ENTRYPOINT ["/entrypoint.sh"]
+COPY getaur.sh /getaur.sh
+ENTRYPOINT ["/getaur.sh"]
