@@ -1,0 +1,15 @@
+    name: GetAUR
+    on: 
+      workflow_dispatch:
+    jobs:
+      build:
+        runs-on: ubuntu-latest
+        steps:
+        
+        - uses: Brx86/build-aur-action@aur
+        - uses: ncipollo/release-action@v1.6.1
+          with:
+            allowUpdates: true
+            tag: "aur"
+            artifacts: "./aur.tar.xz"
+            token: ${{ secrets.GITHUB_TOKEN }}
