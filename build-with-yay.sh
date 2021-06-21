@@ -10,5 +10,5 @@ AYA
 pacman -Syu --noconfirm --needed yay
 useradd builder -m
 echo "builder ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
-sudo -u builder yay -Sa $1 --noconfirm --nodiffmenu --nocleanmenu --makepkg -sf --noconfirm --skippgpcheck --nodeps
+sudo -u builder yay -Sa $1 --noconfirm --nodiffmenu --nocleanmenu --makepkg -s
 mv /home/builder/.cache/yay/*/*.pkg.tar.zst ./$1/
