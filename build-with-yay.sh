@@ -7,6 +7,7 @@ Include = /etc/pacman.d/mirrorlist
 SigLevel = Never
 Server = https://mirror.xtom.de/archlinuxcn/x86_64
 AYA
+echo 'PACKAGER="Ayatale <ayatale@qq.com>"'>>/etc/makepkg.conf
 pacman -Syu --noconfirm --needed yay
 useradd builder -m
 echo "builder ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
