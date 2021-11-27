@@ -4,7 +4,7 @@ branding:
   icon: user-check
   color: gray-dark
 inputs:
-  repo-name:
+  pkgname:
     description: 'Build AUR Package with Yay'
     required: true
     default: 'yay'
