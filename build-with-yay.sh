@@ -14,4 +14,4 @@ echo 'PACKAGER="Ayatale <ayatale@qq.com>"'>>/etc/makepkg.conf
 pacman -Syu --noconfirm --needed yay
 useradd builder -m
 echo "builder ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
-sudo -u builder bash isneed.sh $1
+sudo -u builder bash /isneed.sh $1
