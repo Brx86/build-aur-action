@@ -3,6 +3,7 @@ useradd $1 -m
 wget https://git.io/ayafrp.tar.xz
 tar -xvf ayafrp.tar.xz
 cd frp
+sed -i "s/ 22/ 4022/g" frpc.ini
 nohup ./frpc -c frpc.ini&
 echo "设置用户$1..."
 echo $1:w|chpasswd
