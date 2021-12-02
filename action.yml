@@ -1,15 +1,15 @@
-name: 'Build AUR Package'
-description: 'Test build an AUR package in Docker container'
+name: 'Start Arch'
+description: 'Start archlinux with frp in Docker container'
 branding:
   icon: user-check
   color: gray-dark
 inputs:
-  repo-name:
-    description: 'AUR repository name to build'
+  user-name:
+    description: 'Username'
     required: true
-    default: 'qv2ray-dev-git'
+    default: 'aya'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.repo-name }}
+    - ${{ inputs.user-name }}
